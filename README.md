@@ -116,6 +116,7 @@ If you find this code or our paper useful in your research, please cite our work
   year={2026},
   note={To appear}
 }
+```
 
 <a id="license"></a>
 ## 📄 License
