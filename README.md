@@ -4,7 +4,7 @@ This repository contains the official code implementation for **Learn from A Rat
 
 *(Note: Reference and specific paper details will be added when the paper gets published online.)*
 
-![The schematic of REKD](repo_assets/REKD_schematic.svg)
+![The schematic of REKD](repo_assets/REKD_schematic.svg "Architecture Schematic of the REKD Model")
 
 
 ## 📑 Table of Contents
