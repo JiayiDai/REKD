@@ -4,3 +4,4 @@ wandb/
 rationales/
 hf_cache/
 demo/
+.DS_Store

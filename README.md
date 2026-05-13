@@ -4,6 +4,11 @@ This repository contains the official code implementation for **Learn from A Rat
 
 *(Note: Reference and specific paper details will be added when the paper gets published online.)*
 
+![The schematic of REKD](repo_assets/REKD_schematic.png)
+
+![An actual example from IMDB moview reviews](repo_assets/REKD_demo.png)
+
+
 ## 📑 Table of Contents
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
