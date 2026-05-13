@@ -8,9 +8,9 @@ This repository contains the official code implementation for **Learn from A Rat
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
 - [Installation](#installation)
-- [Data Preparation](#data-preparation)
+- [Data and Model Preparation](#data-model-preparation)
 - [Usage](#usage)
-  - [Training and testing](#training-and-testing)
+  - [Training and Testing](#training-and-testing)
   - [Rationales](#rationales)
 - [Citation](#citation)
 - [License](#license)
@@ -57,25 +57,31 @@ git clone https://github.com/JiayiDai/REKD.git
 pip install -r requirements.txt
 ```
 
-<a id="data-preparation"></a>
-## 📊 Data Preparation
+<a id="data-model-preparation"></a>
+## 📊 Data and Model Preparation
 The REKD framework is validated on both language and vision tasks. Please prepare the datasets before running the experiments.
 
-We have included "IMDB movie reviews", "CIFAR10/100". 
+We have included `IMDB movie reviews`, `CIFAR10` and `CIFAR100` for datasets;
 
-More datasets could be added in data/retrieve_data_balanced.py.
+`bert-base-uncased`, `bert-small`, `bert-mini` for language;
+
+`vit-base-patch16-224`, `vit-small-patch16-224`, `vit-tiny-patch16-224` for vision.
+
+More datasets could be added in `data/retrieve_data_balanced.py`.
+
+More neural models could be added in `nns/`.
 
 <a id="usage"></a>
 ## 🚀 Usage
 
-### Training and testing
+### Training and Testing
 To train and test the models, execute the provided bash scripts in the `scripts/` directory. 
 
 You can specify the dataset and backbone neural model (e.g., BERT for language, ViT for vision) within the scripts.
 
 ```bash
 # We have included the following scripts
-# With teacher=bert_base_uncased; student=bert_small; seed=2026; dataset=IMDB
+# With teacher=bert-base-uncased; student=bert-small; seed=2026; dataset=IMDB
 # Note that teacher rationale extraction has to be done before knowledge distillation
 
 # Example for classification (CLS)
