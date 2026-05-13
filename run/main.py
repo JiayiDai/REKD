@@ -2,7 +2,7 @@ from os.path import dirname, realpath
 import sys
 sys.path.append(dirname(dirname(realpath(__file__))))
 import torch
-import data.retrive_data_balanced as retrive_data
+import data.retrieve_data_balanced as retrieve_data
 import utils.params as params
 import nns.generator as generator
 import nns.encoder as encoder
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     args.gumbel_t = args.init_t
     args.lr = args.init_lr
     
-    train_data, dev_data, test_data = retrive_data.get_dataloaders(args)
+    train_data, dev_data, test_data = retrieve_data.get_dataloaders(args)
     gen, enc = generator.Generator(args), encoder.Encoder(args)
     if args.train:
         gen, enc = learn.train(train_data, dev_data, gen, enc, args)
