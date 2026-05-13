@@ -10,11 +10,12 @@ This repository contains the official code implementation for **Learn from A Rat
 - [Installation](#installation)
 - [Data Preparation](#data-preparation)
 - [Usage](#usage)
-  - [Training and testing](#training)
+  - [Training and testing](#training-and-testing)
   - [Rationales](#rationales)
 - [Citation](#citation)
 - [License](#license)
 
+<a id="overview"></a>
 ## 📖 Overview
 *In the select-predict architecture of rationale extraction (RE), the generator relies on the guidance of the predictor to select important features (i.e., a rationale) while the predictor relies on the output of the generator to learn task prediction. This "chicken-and-egg" dilemma is significantly exacerbated when the base neural networks are not sufficiently capable. 
 To mitigate this, we propose a knowledge distillation method REKD for Gumbel-Softmax based RE models where a student models learns from the rationales and the predictions of a teacher RE model in addition to its own RE exploration. Our approach provides a neural-model agnostic distillation framework that leverages the intrinsic curriculum of the Gumbel-Softmax annealing.*
@@ -24,6 +25,7 @@ To mitigate this, we propose a knowledge distillation method REKD for Gumbel-Sof
   <figcaption><b>Figure:</b> Architecture Schematic of REKD. </figcaption>
 </figure>
 
+<a id="repository-structure"></a>
 ## 🗂 Repository Structure
 The repository is organized as follows:
 
@@ -41,6 +43,7 @@ REKD/
 └── README.md           # This documentation file
 ```
 
+<a id="installation"></a>
 ## ⚙️ Installation
 Follow these steps to set up the environment and install the required dependencies for REKD.
 
@@ -53,6 +56,7 @@ git clone https://github.com/JiayiDai/REKD.git
 pip install -r requirements.txt
 ```
 
+<a id="data-preparation"></a>
 ## 📊 Data Preparation
 The REKD framework is validated on both language and vision tasks. Please prepare the datasets before running the experiments.
 
@@ -60,6 +64,7 @@ We have included "IMDB movie reviews", "CIFAR10/100".
 
 More datasets could be added in data/retrieve_data_balanced.py.
 
+<a id="usage"></a>
 ## 🚀 Usage
 
 ### Training and testing
