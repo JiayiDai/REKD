@@ -10,14 +10,14 @@ This repository contains the official code implementation for **Learn from A Rat
 - [Installation](#installation)
 - [Data Preparation](#data-preparation)
 - [Usage](#usage)
-  - [Training](#training)
-  - [Evaluation](#evaluation)
-  - [Ablation Studies](#ablation-studies)
+  - [Training and testing](#training)
+  - [Rationales](#rationales)
 - [Citation](#citation)
 - [License](#license)
 
 ## 📖 Overview
-*In the select-predict architecture of rationale extraction (RE), the generator relies on the guidance of the predictor to select important features (i.e., a rationale) while the predictor relies on the output of the generator to learn task prediction. This "chicken-and-egg" dilemma is significantly exacerbated when the base neural networks are not sufficiently capable. To mitigate this, we propose a knowledge distillation method REKD for Gumbel-Softmax based RE models where a student models learns from the rationales and the predictions of a teacher RE model in addition to its own RE exploration. Our approach provides a neural-model agnostic distillation framework that leverages the intrinsic curriculum of the Gumbel-Softmax annealing. We validate REKD on both language and vision tasks using multiple variants of BERT and ViT as RE backbones. Experiments demonstrate that REKD significantly improves the predictive performance of the student RE models.*
+*In the select-predict architecture of rationale extraction (RE), the generator relies on the guidance of the predictor to select important features (i.e., a rationale) while the predictor relies on the output of the generator to learn task prediction. This "chicken-and-egg" dilemma is significantly exacerbated when the base neural networks are not sufficiently capable. 
+To mitigate this, we propose a knowledge distillation method REKD for Gumbel-Softmax based RE models where a student models learns from the rationales and the predictions of a teacher RE model in addition to its own RE exploration. Our approach provides a neural-model agnostic distillation framework that leverages the intrinsic curriculum of the Gumbel-Softmax annealing.*
 
 <figure align="center">
   <img src="repo_assets/REKD_schematic.svg" alt="The schematic of REKD" width="800">
@@ -50,11 +50,51 @@ Follow these steps to set up the environment and install the required dependenci
 
 ```bash
 git clone https://github.com/JiayiDai/REKD.git
-cd REKD
 pip install -r requirements.txt
 ```
 
 ## 📊 Data Preparation
 The REKD framework is validated on both language and vision tasks. Please prepare the datasets before running the experiments.
 
-See data folder for details.
+We have included "IMDB movie reviews", "CIFAR10/100". 
+
+More datasets could be added in data/retrieve_data_balanced.py.
+
+## 🚀 Usage
+
+### Training and testing
+To train and test the models, execute the provided bash scripts in the `scripts/` directory. 
+
+You can specify the dataset and backbone neural model (e.g., BERT for language, ViT for vision) within the scripts.
+
+```bash
+# We have included the following scripts
+# With teacher=bert_base_uncased; student=bert_small; seed=2026; dataset=IMDB
+# Note that teacher rationale extraction has to be done before knowledge distillation
+
+# Example for classification (CLS)
+bash scripts/bert_base_cls/bert_cls.sh 2026
+bash scripts/bert_small_cls/small_cls.sh 2026
+
+# Example for rationale extraction (RE)
+bash scripts/bert_base_re/bert_re.sh 2026
+bash scripts/bert_small_re/small_re.sh 2026
+
+# Example for rationale extraction with knowledge distillation (REKD)
+# The teacher model path is specified in the script
+bash scripts/bert_small_kd/small_kd.sh 2026
+```
+
+The trained models will be saved in `saved/` folder.
+The testing results will appear in `results/` folder.
+
+### Rationales
+Given a RE or REKD model, you may output the rationales with the following script. 
+
+```bash
+# Example for BERT on IMDB
+bash scripts/run_rationales/run_inference.sh
+```
+
+See `scripts/run_rationales/` folder for more scripts.
+
