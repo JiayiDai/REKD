@@ -1,9 +1,6 @@
-The code implementation for Rationale Extraction with Knowledge Distillation (REKD)
-
-Reference and details to be added when paper gets online
 # Rationale Extraction with Knowledge Distillation (REKD)
 
-This repository contains the official code implementation for **Rationale Extraction with Knowledge Distillation (REKD)**. 
+This repository contains the official code implementation for **Learn from A Rationalist: Distilling Intermediate Interpretable Rationales**. 
 
 *(Note: Reference and specific paper details will be added when the paper gets published online.)*
 
