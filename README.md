@@ -1,6 +1,6 @@
 # Rationale Extraction with Knowledge Distillation (REKD)
 
-This repository contains the official code implementation for **Learn from A Rationalist: Distilling Intermediate Interpretable Rationales**. 
+This repository contains the official code implementation for **Learn from A Rationalist: Distilling Intermediate Interpretable Rationales** to appear on ICML 2026. 
 
 *(Note: Reference and specific paper details will be added when the paper gets published online.)*
 
@@ -18,6 +18,7 @@ This repository contains the official code implementation for **Learn from A Rat
 <a id="overview"></a>
 ## 📖 Overview
 *In the select-predict architecture of rationale extraction (RE), the generator relies on the guidance of the predictor to select important features (i.e., a rationale) while the predictor relies on the output of the generator to learn task prediction. This "chicken-and-egg" dilemma is significantly exacerbated when the base neural networks are not sufficiently capable. 
+
 To mitigate this, we propose a knowledge distillation method REKD for Gumbel-Softmax based RE models where a student models learns from the rationales and the predictions of a teacher RE model in addition to its own RE exploration. Our approach provides a neural-model agnostic distillation framework that leverages the intrinsic curriculum of the Gumbel-Softmax annealing.*
 
 <figure align="center">
