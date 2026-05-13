@@ -61,11 +61,11 @@ pip install -r requirements.txt
 ## 📊 Data and Model Preparation
 The REKD framework is validated on both language and vision tasks. Please prepare the datasets before running the experiments.
 
-We have included `IMDB movie reviews`, `CIFAR10` and `CIFAR100` for datasets;
+Datasets: `IMDB movie reviews`, `CIFAR10` and `CIFAR100`.
 
-`bert-base-uncased`, `bert-small`, `bert-mini` for language;
+Language models: `bert-base-uncased`, `bert-small`, `bert-mini` for language.
 
-`vit-base-patch16-224`, `vit-small-patch16-224`, `vit-tiny-patch16-224` for vision.
+Vision models: `vit-base-patch16-224`, `vit-small-patch16-224`, `vit-tiny-patch16-224`.
 
 More datasets could be added in `data/retrieve_data_balanced.py`.
 
