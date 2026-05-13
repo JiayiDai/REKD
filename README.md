@@ -103,3 +103,21 @@ bash scripts/run_rationales/run_inference.sh
 
 See `scripts/run_rationales/` folder for more scripts.
 
+<a id="citation"></a>
+## 📝 Citation
+
+If you find this code or our paper useful in your research, please cite our work:
+
+```bibtex
+@inproceedings{dai2026rekd,
+  title={Learn from A Rationalist: Distilling Intermediate Interpretable Rationales},
+  author={Dai, Jiayi and Goebel, Randy},
+  booktitle={Proceedings of the 43rd International Conference on Machine Learning},
+  year={2026},
+  note={To appear}
+}
+
+<a id="license"></a>
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
