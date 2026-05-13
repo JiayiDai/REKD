@@ -5,8 +5,8 @@ CMD="python3 run/main_inference.py \
     --cuda \
     --dataset imdb \
     --model_form bert-base-uncased \
-    --rand_seed 2035 \
-    --id bert_re_5e-5 \
+    --rand_seed 2026 \
+    --id bert_re \
     --save_dir saved \
     --batch_size 32 \
     --test \

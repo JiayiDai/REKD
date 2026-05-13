@@ -18,13 +18,13 @@ python3 run/main_kd.py \
     --model_form prajjwal1/bert-small \
     --model_form_t bert-base-uncased \
     --rand_seed "$SEED" \
-    --id "small_kd_5e-1_095" \
-    --id_t "bert_re_5e-52035" \
+    --id "small_kd" \
+    --id_t "bert_re2026" \
     --train \
     --test \
     --get_rationales \
     --total_features 256 \
-    --target_sparsity 0.095 \
+    --target_sparsity 0.10 \
     --select_lambda 1e-4 \
     --kd_r_lambda 5e-1 > /dev/null 2>&1
 

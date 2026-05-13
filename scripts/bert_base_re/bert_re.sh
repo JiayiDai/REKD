@@ -14,13 +14,15 @@ echo "Starting training with Seed: $SEED"
 # SLURM assigns the specific GPU to this job automatically.
 
 python3 run/main.py \
-    --dataset 20news \
     --cuda \
-    --model_form prajjwal1/bert-mini \
+    --model_form bert-base-uncased \
     --rand_seed "$SEED" \
-    --id "mini_cls_20news" \
-    --epochs 20 \
+    --id "bert_re" \
     --train \
-    --test > /dev/null 2>&1
+    --test \
+    --get_rationales \
+    --total_features 256 \
+    --target_sparsity 0.10 \
+    --select_lambda 5e-5 > /dev/null 2>&1
 
 echo "Job for seed $SEED finished."
