@@ -63,7 +63,7 @@ The implementation covers both language and vision tasks. Please prepare the dat
 
 Datasets: `IMDB movie reviews`, `CIFAR10` and `CIFAR100`.
 
-Language models: `bert-base-uncased`, `bert-small`, `bert-mini` for language.
+Language models: `bert-base-uncased`, `bert-small`, `bert-mini`.
 
 Vision models: `vit-base-patch16-224`, `vit-small-patch16-224`, `vit-tiny-patch16-224`.
 
