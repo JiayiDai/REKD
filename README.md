@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 <a id="data-model-preparation"></a>
 ## 📊 Data and Model Preparation
-The REKD framework is validated on both language and vision tasks. Please prepare the datasets before running the experiments. We have included the following datasets and backbone neural models:
+The implementation has covered both language and vision tasks. Please prepare the datasets before running the experiments. We have included the following datasets and backbone neural models:
 
 Datasets: `IMDB movie reviews`, `CIFAR10` and `CIFAR100`.
 
