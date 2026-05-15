@@ -54,7 +54,7 @@ Follow these steps to set up the environment and install the required dependenci
 
 ```bash
 git clone https://github.com/JiayiDai/REKD.git
-cd rekd
+cd REKD
 pip install -r requirements.txt
 ```
 
